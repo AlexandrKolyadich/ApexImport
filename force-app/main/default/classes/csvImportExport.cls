@@ -22,7 +22,7 @@ public class csvImportExport {
         public String Status__c;
 
 */
-        List<Base_Station__c> stations = [select Id from Base_Station__c ];
+        List<Base_Station__c> stations = [select Id, Name from Base_Station__c ];
         for(Base_Station__c station:stations){
             Integer i;
             for( i = 0; i < datalist.size(); i++)
