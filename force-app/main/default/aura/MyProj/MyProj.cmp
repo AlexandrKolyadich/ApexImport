@@ -1,0 +1,24 @@
+<aura:component controller="csvImportExport" >
+
+       
+    
+   
+    
+    <!-- Import attributes start  -->
+    <aura:attribute name="ShowModule" type="boolean" default="false"/>
+    <aura:attribute name="showcard" type="boolean" default="false"/>
+    <!-- Import attributes end  -->
+    
+    <div>
+        <input type="file" class="file" aura:id="file" onchange="{!c.showfiledata}"/>
+        <lightning:button label="Create Sensors" onclick="{!c.CreateRecord}" class="slds-button slds-button--brand"/>
+        
+    </div>
+    
+    <aura:if isTrue = "{!v.showcard}">
+        <lightning:card>
+            <div id="divCSV">
+            </div>  
+        </lightning:card>
+    </aura:if>
+</aura:component>
