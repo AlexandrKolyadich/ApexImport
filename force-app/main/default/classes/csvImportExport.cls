@@ -34,7 +34,7 @@ public class csvImportExport {
                     sensor.Sensor_model__c = datalist.get(i).SensorModel;
                     sensor.Status__c = datalist.get(i).Status;
                     
-                    sensor.Base_Station__c = stations.get(i).Id;
+                    sensor.Base_Station__c = station.Id;
                     
                     
                     SensorListtoInsert.add(sensor);
